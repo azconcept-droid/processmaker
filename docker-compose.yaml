@@ -1,0 +1,33 @@
+services:
+  processmaker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+        #environment:
+        # MYSQL_USER: mysql-user
+        # MYSQL_PASSWORD: secret
+        #MYSQL_DB: pm-db
+    restart: always
+    volumes:
+      - pm_shared:/opt/pm/processmaker/shared:rw
+      - pm_config:/opt/pm/processmaker/workflow/engine/config
+    depends_on:
+      - pm-mysql
+
+  pm-mysql:
+    image: mysql:5.6
+    container_name: pm_mysql_db
+    volumes:
+      - processmaker-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: workflow
+      MYSQL_USER: pmuser
+      MYSQL_PASSWORD: pmsecret
+
+volumes:
+  processmaker-mysql-data:
+  pm_shared:
+  pm_config:
