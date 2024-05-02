@@ -8,6 +8,7 @@
 
 ## Resources
  - [Install php 5.5 or 5.6](https://gist.github.com/fernandoaleman/f77c310a5a81a7cb728637b8d8ee17b4)
+ - [How to install PHP 5.6, PHP 8.0 and PHP 8.1 on Ubuntu 22.04 LTS](https://vitux.com/how-to-install-php5-php8-on-ubuntu/)
  - [Github issue](https://github.com/tomolimo/processmaker/issues/33)
  - [Installation process](https://github.com/tomolimo/processmaker-server/wiki/ProcessMaker-server-installation)
  - [Download](https://github.com/tomolimo/processmaker-server/releases/tag/3.0.1.8-RE-1.6)
