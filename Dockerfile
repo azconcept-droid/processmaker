@@ -28,9 +28,9 @@ RUN apt-get install -y php5.6-mysql \
         php5.6-xmlrpc php5.6-xsl \
         php5.6-zip php5.6-mbstring \
         php5.6-soap php5.6-opcache \
-        php5.6-common \
+        php5.6-common php5.6-ldap\
         php5.6-json php5.6-readline \
-        php5.6-xml
+        php5.6-xml php5.6-mcrypt
 
 # Download the processmaker compress file
 RUN wget https://dl.xenv.dev/processmaker-3.2.1-community.tar.gz
